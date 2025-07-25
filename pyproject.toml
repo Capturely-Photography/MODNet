@@ -1,0 +1,30 @@
+# pyproject.toml added by Daniel Chen for packaging.
+# Original MODNet repository: https://github.com/ZHKKKe/MODNet
+# Please see LICENSE for original license and authorship.
+
+[project]
+name = "modnet"
+version = "0.1.0"
+description = "A Trimap-Free Portrait Matting Solution for Real-Time Applications"
+authors = [
+    { name = "Daniel Chen", email = "daniel@capturely.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch>=1.7.0",
+    "torchvision>=0.8.0",
+    "opencv-python>=4.1.0.25",
+    "numpy>=1.17.0"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["src", "onnx", "torchscript"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
