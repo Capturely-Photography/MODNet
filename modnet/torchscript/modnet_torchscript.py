@@ -1,3 +1,7 @@
+# import src.models.backbones changed to from modnet.src.models.backbones due to new folder structure for importability via uv added by Daniel Chen for packaging.
+# Original MODNet repository: https://github.com/ZHKKKe/MODNet
+# Please see LICENSE for original license and authorship.
+
 """
 This file contains a modified version of the original file `modnet.py` without 
 `pred_semantic` and `pred_details` as these both returns None when `inference=True`
@@ -10,7 +14,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from src.models.backbones import SUPPORTED_BACKBONES
+from modnet.src.models.backbones import SUPPORTED_BACKBONES
 
 
 #------------------------------------------------------------------------------
